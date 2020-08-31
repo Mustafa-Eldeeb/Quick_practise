@@ -40,5 +40,22 @@ vector <State> ParseLine(string line)
     return v;
 }
 
-// read board file
+// function to read board file
 
+vector<vector<State>> ReadBoardFile(string path)
+{
+    ifstream myfile(path);
+    vector<vector<State>> board{};
+    vector<State> row;
+    if (myfile)
+    {
+        string line;
+        while (getline(myfile, line))
+        {
+            row = ParseLine(line);
+            board.push_back(row);
+        }
+    }
+
+    return board;
+}
