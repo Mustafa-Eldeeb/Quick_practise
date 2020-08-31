@@ -70,7 +70,7 @@ string cellString(State cell)
         break;
     
     default:
-        return "0";
+        return "0   ";
         break;
     }
 }
@@ -84,6 +84,16 @@ void printBoard(vector<vector<State>> v)
         {
             cout<< cellString(v[count][j]);
         }
+        cout<<"\n";
     }
 
+}
+
+int main ()
+{
+    auto board = ReadBoardFile("1.board");
+    printBoard(board);
+
+
+    return 0;
 }
