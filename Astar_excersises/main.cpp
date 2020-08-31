@@ -60,3 +60,30 @@ vector<vector<State>> ReadBoardFile(string path)
     return board;
 }
 
+// func to represent obstacles and free postions
+string cellString(State cell)
+{
+    switch (cell)
+    {
+    case State::kObstacle:
+        return "⛰   ";
+        break;
+    
+    default:
+        return "0";
+        break;
+    }
+}
+
+// print board function
+void printBoard(vector<vector<State>> v)
+{
+    for (int count =0; count < v.size(); count++)
+    {
+        for (int j =0; j < v[count].size(); j++)
+        {
+            cout<< cellString(v[count][j]);
+        }
+    }
+
+}
