@@ -59,3 +59,4 @@ vector<vector<State>> ReadBoardFile(string path)
 
     return board;
 }
+
