@@ -25,6 +25,7 @@ int main()
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
     std::cout<<"finished work 2 in main\n"<<std::endl;
 
+    t.join();
 
     return 0;
 }
